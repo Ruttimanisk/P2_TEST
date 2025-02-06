@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>My first website</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h1>This is my first website.</h1>
+    <h2>On my first day of IWP..</h2>
+    <p id="myp">Today we are going to see html, css, and js.</p>
+    <img src="images/temp.png" />
+
+    <script>
+        let x = 12;
+        let y = 30;
+        let z = x * y;
+        console.log(z);
+
+        document.getElementById("myp").innerText = "Deez Nutz";
+        prompt("Indtast PIN-kode og bank oplysninger");
+        let sum_even = 0;
+
+        for(let i = 0; i <= 100; i++){
+            if(i % 2 === 0){
+
+                sum_even += i;
+            }
+        }
+        console.log(sum_even);
+
+        function sumNumbers(a, b){
+            let c = a + b;
+            return c;
+        }
+
+        console.log(sumNumbers(4, 5));
+
+        let mult = function (a, b)
+        {
+            return a * b;
+        }
+
+        console.log(mult(7,8));
+
+        const square = (x) => {
+            return x * x;
+        }
+        console.log("Arrow function square: " + square(5));
+
+        //what happens if you pass more arguments
+        console.log(mult(2,3,4,5));
+
+        // what happens if you pass too few arguments
+        console.log(mult(1));
+
+        //optional arguments
+        function exponential(base, exp = 2) {
+            let res = 1;
+            for(let i = 0; i < exp; i++) {
+                res *= base;
+            }
+            return res;
+        }
+
+        console.log(exponential(4,5));
+        console.log(exponential(4));
+    </script>
+</body>
+</html>
