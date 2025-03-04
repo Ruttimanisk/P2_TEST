@@ -6,11 +6,11 @@
     <title>Run Code</title>
 </head>
 <body>
-    <button id="myButton">Click Me</button>
+    <button id="myButton" onclick="buttonOutput()">Click Me</button>
     <div id="output"></div>
     <script src = "Learning.js"></script>
     <script>
-        document.getElementById("myButton").onclick = function() {
+        function buttonOutput() {
             document.getElementById("output").innerText = EmpMads.format();
         };
     </script>
