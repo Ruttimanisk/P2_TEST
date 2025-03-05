@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Frontpage</title>
+        <link rel="stylesheet" href="/CSS/style.css">
+        <script type="text/javascript" src="/JS/script.js"></script>
+    </head>
+    <body>
+    <a class="login">
+        Username: <input type="text" name="username" id="uname">
+        <label for="uname"></label>
+        Password: <input type="text" name="password" id="pword">
+        <label for="pword"></label>
+    </a>
+    <button id="submit" onclick="checkLogin()">Submit</button>
+    <p id="welcome">navn her</p>
+
+    <div class="popup" onclick="myFunction()">Click me!
+        <span class="popuptext" id="myPopup">........   Prøv igen Mads</span>
+    </div>
+    <script>
+        // When the user clicks on <div>, open the popup
+        function myFunction() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+    </script>
+
+    <!-- Login box, med brugernavn og password
+    // Skal håndtere medarbejder og leder/admin type
+    // <script src="/JS/script.js"></script>-->
+
+        <!-- Hent auth fra database>
+
+        Gå til skema side efter login.
+
+    </body>
+</html>
