@@ -28,8 +28,6 @@ function checkLogin() {
     }
 }
 
-
-
-
-
-
+function home_admin() {
+    window.location.href="http://localhost:63342/P2_TEST/HTML/HOME%20ADMIN.html?_ijt=5iij2ocpf4gbuso5h824c0unvj&_ij_reload=RELOAD_ON_SAVE";
+}
