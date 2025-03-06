@@ -2,7 +2,9 @@ p {
     color: darkred;
 }
 h1 {
-    font-family: "Al Bayan", serif
+    position: relative;
+    left: 540px;
+    top: 100px;
 }
 .login {
     color: blue;
@@ -16,11 +18,16 @@ h1 {
     padding: 20px;
     margin: 20px;
     position: relative;
+    left: 400px;
+    top: 100px;
 }
-.highlight {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: red;
-    font-weight: bold;
+.login {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.login input {
+    margin-left: 10px
 }
