@@ -26,10 +26,11 @@ function checkLogin() {
     }
 
     if (passw.value === userList[index].password) {
+        // skal udskiftes med link til brugerplatform:
         window.location.href="http://localhost:63342/GitHub/P2_TEST/HTML/Employees.html?_ijt=o04c9jfqf5oe6kaj88ejttnb1h&_ij_reload=RELOAD_ON_SAVE";
     }
 }
 
 function home_admin() {
-    window.location.href="http://localhost:63342/P2_TEST/HTML/HOME%20ADMIN.html?_ijt=5iij2ocpf4gbuso5h824c0unvj&_ij_reload=RELOAD_ON_SAVE";
+    window.location.href="http://localhost:63342/GitHub/P2_TEST/HTML/HOME%20ADMIN.html?_ijt=qnl3e4uc6o67r5c7ejlphgtu39&_ij_reload=RELOAD_ON_SAVE";
 }
