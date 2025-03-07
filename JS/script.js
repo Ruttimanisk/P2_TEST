@@ -1,16 +1,17 @@
 class User {
-    constructor(name, username, password) {
+    constructor(name, username, password, status) {
         this.name = name;
         this.username = username;
         this.password = password;
+        this.status = status;
     }
 }
-const user1 = new User('Mads', 'mads1234', '1234')
+const user1 = new User('Mads', 'mads1234', '1234', 'employee')
 
 // det virker!! submit gør kun noget med korrekt username og password
 function checkLogin() {
-    const usern = document.querySelector("#uname");
-    const passw = document.querySelector("#pword");
+    const userN = document.querySelector("#usernameInput");
+    const passW = document.querySelector("#passwordInput");
 
     User.allInstances = [];
     User.allInstances.push(user1);
@@ -19,18 +20,25 @@ function checkLogin() {
     let index = 0;
 
     for(let i = 0; i < userList.length; i++) {
-        if (userList[i].username === usern.value){
+        if (userList[i].username === userN.value){
             index = i;
             break;
         }
     }
 
-    if (passw.value === userList[index].password) {
-        // skal udskiftes med link til brugerplatform:
-        window.location.href="http://localhost:63342/GitHub/P2_TEST/HTML/Employees.html?_ijt=o04c9jfqf5oe6kaj88ejttnb1h&_ij_reload=RELOAD_ON_SAVE";
-    }
+    if (passW.value === userList[index].password) {
+        // links skal udskiftes med link til brugerplatform:
+        if (userList[index].status === 'employee') {
+            window.location.href="Employees.html";
+            localStorage.setItem('userStatus', userList[index].status)
+        }
+        else if (userList[index].status === 'admin') {
+            window.location.href="HOME ADMIN.html";
+            localStorage.setItem('userStatus', userList[index].status)
+        }
+    } else (alert("Wrong username and/or password."))
 }
 
 function home_admin() {
-    window.location.href="http://localhost:63342/GitHub/P2_TEST/HTML/HOME%20ADMIN.html?_ijt=qnl3e4uc6o67r5c7ejlphgtu39&_ij_reload=RELOAD_ON_SAVE";
+    window.location.href="HOME ADMIN.html";
 }
