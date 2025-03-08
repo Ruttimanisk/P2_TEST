@@ -26,17 +26,21 @@ function checkLogin() {
         }
     }
 
-    if (passW.value === userList[index].password) {
-        // links skal udskiftes med link til brugerplatform:
-        if (userList[index].status === 'employee') {
-            window.location.href="Employees.html";
-            localStorage.setItem('userStatus', userList[index].status)
+    try {
+        if (passW.value === userList[index].password) {
+            // links skal udskiftes med link til brugerplatform:
+            if (userList[index].status === 'employee') {
+                window.location.href = "Employees.html";
+                localStorage.setItem('userStatus', userList[index].status)
+            } else if (userList[index].status === 'admin') {
+                window.location.href = "HOME ADMIN.html";
+                localStorage.setItem('userStatus', userList[index].status)
+            }
         }
-        else if (userList[index].status === 'admin') {
-            window.location.href="HOME ADMIN.html";
-            localStorage.setItem('userStatus', userList[index].status)
-        }
-    } else (alert("Wrong username and/or password."))
+    }
+    catch(err) {
+        alert("Wrong username and/or password.")
+    }
 }
 
 function home_admin() {
