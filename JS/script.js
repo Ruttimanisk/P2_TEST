@@ -17,7 +17,7 @@ function checkLogin() {
     User.allInstances.push(user1);
     let userList = User.allInstances
 
-    let index = 0;
+    let index = null;
 
     for(let i = 0; i < userList.length; i++) {
         if (userList[i].username === userN.value){
