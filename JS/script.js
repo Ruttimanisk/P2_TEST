@@ -1,33 +1,44 @@
 class User {
-    constructor(name, username, password) {
+    constructor(name, username, password, status) {
         this.name = name;
         this.username = username;
         this.password = password;
+        this.status = status;
     }
 }
-const user1 = new User('Mads', 'mads1234', '1234')
+const user1 = new User('Mads', 'mads1234', '1234', 'employee')
 
+// det virker!! submit gør kun noget med korrekt username og password
 function checkLogin() {
-    const usern = document.querySelector("#uname");
-    const paword = document.querySelector("#pword");
-    let index = 0;
+    const userN = document.querySelector("#usernameInput");
+    const passW = document.querySelector("#passwordInput");
+
     User.allInstances = [];
     User.allInstances.push(user1);
     let userList = User.allInstances
-    console.log(userList.length);
+
+    let index = 0;
+
     for(let i = 0; i < userList.length; i++) {
-        if (userList[i].username === usern.value){
+        if (userList[i].username === userN.value){
             index = i;
             break;
         }
     }
 
-    if (paword.value === userList[index].password) {
-        console.log(userList[index].name)
-        document.getElementById("welcome").innerHTML = "" + userList[index].name
-    }
+    if (passW.value === userList[index].password) {
+        // links skal udskiftes med link til brugerplatform:
+        if (userList[index].status === 'employee') {
+            window.location.href="Employees.html";
+            localStorage.setItem('userStatus', userList[index].status)
+        }
+        else if (userList[index].status === 'admin') {
+            window.location.href="HOME ADMIN.html";
+            localStorage.setItem('userStatus', userList[index].status)
+        }
+    } else (alert("Wrong username and/or password."))
 }
 
 function home_admin() {
-    window.location.href="http://localhost:63342/P2_TEST/HTML/HOME%20ADMIN.html?_ijt=5iij2ocpf4gbuso5h824c0unvj&_ij_reload=RELOAD_ON_SAVE";
+    window.location.href="HOME ADMIN.html";
 }

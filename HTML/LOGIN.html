@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>LOGIN</title>
-        <link rel="stylesheet" href="/CSS/style.css">
-        <script type="text/javascript" src="/JS/script.js"></script>
+        <link rel="stylesheet" href="../CSS/style.css">
+        <script type="text/javascript" src="../JS/script.js"></script>
     </head>
     <body>
-    <img src="/Images/WFM.webp" alt="WFM logo">
+    <img src="../Images/WFM.webp" alt="WFM logo">
     <p class="slogan">WFM - Time is money</p>
 
     <h1>LOGIN</h1>
@@ -16,17 +16,13 @@
     <div class="box">
         <p>
             <a class="login">
-            Username: <input type="text" name="username" id="uname">
-            <label for="uname"></label>
-            Password: <input type="text" name="password" id="pword">
-            <label for="pword"></label>
-            <!--    Indtil checkLogin() virker, laver jeg knappen om til et link
-                    til HOME ADMIN siden, så vi simulerer et admin login.
-                    Alternativt introducerer vi en knap mere og omdøber dem
-                    til "admin" og "employee", så vi kan bevæge os rundt i
-                    begge grene af programmet
-            <button id="submit" onclick="checkLogin()">Submit</button> -->
-            <button id="submit" onclick="home_admin()">Submit</button>
+            Username: <input type="text" name="username" id="usernameInput">
+            <label for="usernameInput"></label>
+            Password: <input type="text" name="password" id="passwordInput">
+            <label for="passwordInput"></label>
+                <!-- Mads: beholder din knap som "admin" og laver submit som virker med checkLogin.-->
+            <button id="submit" onclick="checkLogin()">Submit</button>
+            <button id="admin" onclick="home_admin()">Admin</button>
             </a>
         </p>
     </div>
