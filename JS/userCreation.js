@@ -16,7 +16,6 @@ function createUser() {
                 return;
             }
             console.log('Line added successfully!');
-            console.log()
         });
     }
 }
