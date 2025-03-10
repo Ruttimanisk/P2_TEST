@@ -10,6 +10,7 @@ class User {
 let userDatabase;
 
 function fetchLogin() {
+    // omskriv til brug af node.js senere (require, readFile)
     fetch('../TXT/userDatabase.txt')
         .then(response => response.text())
         .then(data => {

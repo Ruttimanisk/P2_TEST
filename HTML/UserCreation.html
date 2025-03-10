@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UserCreation</title>
+    <link rel="stylesheet" href="../CSS/UserCreation.css">
+  <script type="text/javascript" src="../JS/userCreation.js"></script>
+</head>
+<body>
+<h1>User Creation:</h1>
+<div class="box">
+  <p>
+    <a class="newUser">
+      Full Name: <input type="text" name="username" id="newFullName"><br>
+      <label for="newFullName"></label>
+      Username: <input type="text" name="username" id="newUsername"><br>
+      <label for="newUsername"></label>
+      Password: <input type="text" name="password" id="newPassword"><br>
+      <label for="newPassword"></label>
+      Status: <input type="text" name="username" id="newStatus"><br>
+      <label for="newStatus"></label>
+      <!-- scriptet createUser() virker kun hvis websiten køres på node.js, mere info i js fil -->
+      <button id="submit" onclick="createUser()">Create user</button>
+    </a>
+  </p>
+</div>
+</body>
+</html>
