@@ -51,7 +51,7 @@ function checkLogin(userDatabase) {
         if (passW.value === userList[index].password) {
             // links skal udskiftes med link til brugerplatform:
             if (userList[index].status === 'employee') {
-                window.location.href = "Employees.html";
+                window.location.href = "Employees_ADMIN.html";
                 localStorage.setItem('userStatus', userList[index].status)
             } else if (userList[index].status === 'admin') {
                 window.location.href = "HOME_ADMIN.html";
