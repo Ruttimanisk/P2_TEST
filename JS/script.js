@@ -17,7 +17,7 @@ function fetchLogin() {
             userDatabase = data
                 .trim()
                 .split('\n')
-                .map(line => line.split(','));
+                .map(line => line.split(',').map(item => item.trim()));
 
             console.log(userDatabase);
             checkLogin(userDatabase)
@@ -49,6 +49,7 @@ function checkLogin(userDatabase) {
 
     try {
         if (passW.value === userList[index].password) {
+            console.log(index);
             // links skal udskiftes med link til brugerplatform:
             if (userList[index].status === 'employee') {
                 window.location.href = "Employees_ADMIN.html";
