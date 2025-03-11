@@ -65,7 +65,9 @@ body {
     background-color: #04AA6D;
     color: white;
 }
-
+#Logout {
+    float: left;
+}
 h2 {
     position: relative;
     left: 163px;

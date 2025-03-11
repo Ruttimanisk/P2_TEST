@@ -63,5 +63,5 @@ function checkLogin(userDatabase) {
     }
 }
 function home_admin() {
-    window.location.href="HOME_ADMIN.html";
+    window.location.href="/P2_TEST/HTML/ADMIN/HOME_ADMIN.html";
 }
