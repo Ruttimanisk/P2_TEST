@@ -54,7 +54,7 @@ function checkLogin(userDatabase) {
                 window.location.href = "Employees.html";
                 localStorage.setItem('userStatus', userList[index].status)
             } else if (userList[index].status === 'admin') {
-                window.location.href = "HOME ADMIN.html";
+                window.location.href = "HOME_ADMIN.html";
                 localStorage.setItem('userStatus', userList[index].status)
             }
         } else {alert("Wrong username and/or password.")}
@@ -63,5 +63,5 @@ function checkLogin(userDatabase) {
     }
 }
 function home_admin() {
-    window.location.href="HOME ADMIN.html";
+    window.location.href="HOME_ADMIN.html";
 }

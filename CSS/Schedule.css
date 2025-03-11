@@ -1,0 +1,32 @@
+#tableA {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    position: relative;
+    left: 160px;
+    bottom: 400px;
+}
+#tableA tr:nth-child(2) {
+    background-color: greenyellow;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+#tableB {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    position: relative;
+    left: 160px;
+    bottom: 370px;
+}
+#tableB tr:nth-child(2) {
+    background-color: greenyellow;
+}
