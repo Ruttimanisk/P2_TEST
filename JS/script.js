@@ -17,7 +17,7 @@ function fetchLogin() {
             userDatabase = data
                 .trim()
                 .split('\n')
-                .map(line => line.split(','));
+                .map(line => line.split(',').map(item => item.trim()));
 
             console.log(userDatabase);
             checkLogin(userDatabase)
@@ -49,12 +49,13 @@ function checkLogin(userDatabase) {
 
     try {
         if (passW.value === userList[index].password) {
+            console.log(index);
             // links skal udskiftes med link til brugerplatform:
             if (userList[index].status === 'employee') {
-                window.location.href = "Employees.html";
+                window.location.href = "Employees_ADMIN.html";
                 localStorage.setItem('userStatus', userList[index].status)
             } else if (userList[index].status === 'admin') {
-                window.location.href = "HOME ADMIN.html";
+                window.location.href = "HOME_ADMIN.html";
                 localStorage.setItem('userStatus', userList[index].status)
             }
         } else {alert("Wrong username and/or password.")}
@@ -63,5 +64,5 @@ function checkLogin(userDatabase) {
     }
 }
 function home_admin() {
-    window.location.href="HOME ADMIN.html";
+    window.location.href="/P2_TEST/HTML/ADMIN/HOME_ADMIN.html";
 }
