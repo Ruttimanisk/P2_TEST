@@ -49,20 +49,18 @@ function checkLogin(userDatabase) {
 
     test(userList,userN, passW, index)
 
-    try {
-        if (passW.value === userList[index].password) {
-            // links skal udskiftes med link til brugerplatform:
-            if (userList[index].status === 'employee') {
-                window.location.href = "Home_Employee.html";
-                localStorage.setItem('current_user', userList[index])
-            } else if (userList[index].status === 'admin') {
-                window.location.href = "HOME_ADMIN.html";
-                localStorage.setItem('current_user', userList[index])
-            }
-        } else {alert("Wrong username and/or password.")}
-    } catch (err) {
-        alert("Wrong username and/or password.")
-    }
+
+    if (index !== null && passW.value === userList[index].password) {
+        // links skal udskiftes med link til brugerplatform:
+        if (userList[index].status === 'employee') {
+            window.location.href = "/P2_TEST/HTML/Employee/Home_Employee.html";
+            localStorage.setItem('current_user', userList[index])
+        } else if (userList[index].status === 'admin') {
+            window.location.href = "HOME_ADMIN.html";
+            localStorage.setItem('current_user', userList[index])
+        }
+    } else {alert("Wrong username and/or password.")}
+
 }
 
 function home_admin() {
