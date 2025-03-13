@@ -49,7 +49,6 @@ function checkLogin(userDatabase) {
 
     test(userList,userN, passW, index)
 
-
     if (index !== null && passW.value === userList[index].password) {
         // links skal udskiftes med link til brugerplatform:
         if (userList[index].status === 'employee') {
