@@ -1,13 +1,6 @@
 td {
     padding: 15px;
 }
-img {
-    z-index: 1;
-    width: 10%;
-    height: auto;
-    position: relative;
-    padding: 10px;
-}
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
