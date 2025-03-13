@@ -20,7 +20,7 @@ function fetchLogin() {
                 .map(line => line.split(',').map(item => item.trim()));
 
             console.log(userDatabase);
-            checkLogin(userDatabase)
+            checkLogin(userDatabase);
         })
         .catch(error => console.error('Error loading file:', error));
 }
@@ -47,9 +47,10 @@ function checkLogin(userDatabase) {
         }
     }
 
+    test(userList,userN, passW, index)
+
     try {
         if (passW.value === userList[index].password) {
-            console.log(index);
             // links skal udskiftes med link til brugerplatform:
             if (userList[index].status === 'employee') {
                 window.location.href = "Employees_ADMIN.html";
@@ -65,4 +66,14 @@ function checkLogin(userDatabase) {
 }
 function home_admin() {
     window.location.href="/P2_TEST/HTML/ADMIN/HOME_ADMIN.html";
+}
+
+function test(userList, userN, passW, index) {
+    console.log("input username: " + userN.value)
+    console.log("input password: " + passW.value)
+    if (index !== null) {
+        console.log("stored username: " + userList[index].username)
+        console.log("stored password: " + userList[index].password)
+        console.log("index: " + index);
+    } else {console.log("index not found")}
 }
