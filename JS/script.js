@@ -54,10 +54,10 @@ function checkLogin(userDatabase) {
             // links skal udskiftes med link til brugerplatform:
             if (userList[index].status === 'employee') {
                 window.location.href = "Employees_ADMIN.html";
-                localStorage.setItem('userStatus', userList[index])
+                localStorage.setItem('current_user', userList[index])
             } else if (userList[index].status === 'admin') {
                 window.location.href = "HOME_ADMIN.html";
-                localStorage.setItem('userStatus', userList[index])
+                localStorage.setItem('current_user', userList[index])
             }
         } else {alert("Wrong username and/or password.")}
     } catch (err) {
