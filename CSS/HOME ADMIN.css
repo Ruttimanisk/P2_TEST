@@ -32,8 +32,8 @@ h1 {
 }
 img {
     z-index: 1;
-    width: 10%;
-    height: auto;
+    width: auto;
+    height: 128px;
     position: relative;
     padding: 10px;
 }
