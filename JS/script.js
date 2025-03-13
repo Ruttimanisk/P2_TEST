@@ -53,7 +53,7 @@ function checkLogin(userDatabase) {
         if (passW.value === userList[index].password) {
             // links skal udskiftes med link til brugerplatform:
             if (userList[index].status === 'employee') {
-                window.location.href = "Employees_ADMIN.html";
+                window.location.href = "Home_Employee.html";
                 localStorage.setItem('current_user', userList[index])
             } else if (userList[index].status === 'admin') {
                 window.location.href = "HOME_ADMIN.html";
@@ -64,6 +64,7 @@ function checkLogin(userDatabase) {
         alert("Wrong username and/or password.")
     }
 }
+
 function home_admin() {
     window.location.href="/P2_TEST/HTML/ADMIN/HOME_ADMIN.html";
 }
