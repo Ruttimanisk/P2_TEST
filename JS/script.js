@@ -55,7 +55,7 @@ function checkLogin(userDatabase) {
             window.location.href = "/P2_TEST/HTML/Employee/Home_Employee.html";
             localStorage.setItem('current_user', userList[index])
         } else if (userList[index].status === 'admin') {
-            window.location.href = "/P2_TEST/HTML/Employee/Home_Employee.html";
+            window.location.href = "/P2_TEST/HTML/ADMIN/HOME_ADMIN.html";
             localStorage.setItem('current_user', userList[index])
         }
     } else {alert("Wrong username and/or password.")}
